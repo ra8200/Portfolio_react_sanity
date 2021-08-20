@@ -10,7 +10,7 @@ export default function NavBar() {
           <NavLink
             to="/"
             exact
-            activeClassName="text-blue-800"
+            activeClassName="text-white"
             className="inline-flex items-center py-6 px-3 mr-4 text-white hover:text-black text-4xl font-bold styleMe tracking-widest"
           >
             Razi Alawamleh
