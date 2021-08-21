@@ -20,7 +20,7 @@ export default {
       type: "text",
     },
     {
-      name: "projecType",
+      name: "projectType",
       title: "Project type",
       type: "string",
       options: {
