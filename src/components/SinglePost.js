@@ -39,22 +39,19 @@ export default function SingPost() {
 
   return (
     <main className="bg-black min-h-screen p-12">
-      <article className="container shadow-inner bg-blue-100 rounded-lg">
+      <article className="container shadow-inner bg-white rounded-lg">
         <header className=" relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="styleMe text-3xl lg:text-6xl mb-4">
+            <div className="bg-blue-600 bg-opacity-75 rounded p-12">
+              <h1 className="styleMe text-white text-3xl lg:text-6xl mb-4">
                 {singlePost.title}
               </h1>
-              <div className="flex justify-center text-gray-800">
-                {/* <img
+              <div className="flex justify-center text-white">
+                <img
                   src={urlFor(singlePost.authorImage).url()}
                   alt={singlePost.name}
-                  className=""
-                  w-10
-                  h-10
-                  rounded-full
-                /> */}
+                  className="w-10 h-10 rounded-full"
+                />
                 <p className="styleMe flex items-center pl-2 text-2xl">
                   {singlePost.name}
                 </p>
