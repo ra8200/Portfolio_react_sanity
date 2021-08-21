@@ -1,12 +1,12 @@
 import React from "react";
-import image from "../backgroundimg.jpeg";
+import image from "../background.jpg";
 
 export default function Home() {
   return (
     <main>
       <img
         src={image}
-        alt="Alaska"
+        alt="Home"
         className="absolute object-cover w-full h-full"
       />
       <section className="relative flex justify-center min-h-screen pt-12 lg:64 px-8">

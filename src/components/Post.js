@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import sanityClient from "../client";
+import sanityClient from "../client.js";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
@@ -12,10 +12,12 @@ export default function Post() {
         title,
         slug,
         mainImage{
-          _id,
-          url
-        },
-        alt
+          asset->{
+            _id,
+            url
+          },
+          alt
+        }
       }`
       )
       .then((data) => setPost(data))
@@ -23,10 +25,12 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-blue-100 min-h-screen p-12">
+    <main className="bg-black min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center styleMe">Blog Post Page</h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
+        <h1 className="text-5xl text-white flex justify-center styleMe">
+          Blog Post Page
+        </h1>
+        <h2 className="text-lg text-white flex justify-center mb-12">
           Welcome to my Blog Page
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -35,7 +39,7 @@ export default function Post() {
               <article>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
-                    className="block h-65 relative rounded shadow leading-snug bg-white border-l-8 border-blue-400"
+                    className="block h-80 relative rounded shadow leading-snug bg-white border-l-8 border-blue-400"
                     key={index}
                   >
                     <img
@@ -43,8 +47,8 @@ export default function Post() {
                       alt={post.mainImage.alt}
                       className="w-full h-full rounded-r object-cover absolute"
                     />
-                    <span className="blog relative h-full flex justify-end items-end pr-4 pb-4">
-                      <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-blue-700 text-white bg-opacity-75 rounded">
+                    <span className="blog relative h-full flex justify-end items-end pr-6 pb-6">
+                      <h3 className="text-white text-lg font-blog px-3 py-4 bg-blue-700 text-white bg-opacity-75 rounded">
                         {post.title}
                       </h3>
                     </span>
