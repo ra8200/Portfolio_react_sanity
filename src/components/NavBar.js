@@ -53,7 +53,7 @@ export default function NavBar() {
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
-            url="https://www.instagram.com/blinksart/"
+            url="https://www.instagram.com/blinkzart/"
             className="mr-4"
             target="_blank"
             fgcolor="#fff"
