@@ -19,7 +19,7 @@ export default function SingPost() {
         `*[slug.current == "${slug}"] {
       title,
       _id,
-      slub,
+      slug,
       mainImage{
         asset->{
           _id,
